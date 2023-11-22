@@ -1,0 +1,67 @@
+/* Navbar.css */
+
+.navbar {
+    background-color: #56006c; /* Background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .navbar-links.show {
+    max-height: 300px; /* Adjust height as needed */
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #ddd; /* Hover color */
+  }
+  
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .bar.open:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .bar.open:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
